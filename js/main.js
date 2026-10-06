@@ -63,12 +63,24 @@
 
   /* ---------- səhnənin en/boy uyğunlaşdırılması ----------
      Geniş (landscape) ekranlarda səhnə kəsilmir, yanlara əlavə bağ açılır. */
-  const sceneSvgs = $$('svg.in[viewBox="0 0 1200 900"]');
+  const sceneSvgs = $$('svg.in[viewBox^="0 0 1200"], svg.in[data-fit]');
+  const sceneImgs = $$('svg.in image[data-set]');
+  let sceneSet = '';
   function fitScene() {
     const r = window.innerWidth / Math.max(1, $('.hero').clientHeight);
     const vw = Math.min(1700, Math.max(1200, 900 * r));
     const x = (1200 - vw) / 2;
     sceneSvgs.forEach(s => s.setAttribute('viewBox', `${x.toFixed(1)} 0 ${vw.toFixed(1)} 900`));
+    // telefon (dar) üçün kiçik, geniş ekran üçün enli şəkil dəsti — yalnız lazım olan yüklənir
+    const set = r < .76 ? 'p' : 'w';
+    if (set !== sceneSet) {
+      sceneSet = set;
+      sceneImgs.forEach(im => {
+        const on = im.dataset.set === set;
+        im.setAttribute('display', on ? 'inline' : 'none');
+        if (on && !im.getAttribute('href')) im.setAttribute('href', im.dataset.src);
+      });
+    }
   }
   window.addEventListener('resize', fitScene); fitScene();
 
@@ -87,6 +99,7 @@
   const hero = $('.hero');
   let lastSy = -1, lastCx = 99, lastCy = 99;
   function frame() {
+    if (document.hidden) { requestAnimationFrame(frame); return; }
     cx += (mx - cx) * .06; cy += (my - cy) * .06;
     const sy = Math.min(window.scrollY, window.innerHeight * 1.2);
     // dəyişiklik yoxdursa DOM-a yazma (batareya / FPS)
@@ -165,7 +178,9 @@
       const p = Math.max(0, Math.min(1, (vh * .62 - r.top) / r.height));
       ol.style.setProperty('--p', p.toFixed(4));
     }
-    window.addEventListener('scroll', upd, { passive: true }); window.addEventListener('resize', upd); upd();
+    let tick = false;
+    window.addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(() => { tick = false; upd(); }); } }, { passive: true });
+    window.addEventListener('resize', upd); upd();
   })();
 
   /* ---------- paltar rəngləri ---------- */
@@ -304,7 +319,7 @@
   /* ---------- reveal ---------- */
   const io = 'IntersectionObserver' in window ? new IntersectionObserver(es => {
     es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: .15, rootMargin: '0px 0px -6% 0px' }) : null;
+  }, { threshold: .05, rootMargin: '0px 0px -3% 0px' }) : null;
   $$('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
 
   /* ---------- RSVP ---------- */
@@ -336,7 +351,7 @@
   let W = 0, H = 0, dpr = 1, petals = [], running = false, bursts = [];
   const PCOL = ['#F6DAD7', '#FBEAE6', '#F2C9C4', '#FFFFFF', '#E9C3BC', '#F4E4D8'];
   function size() {
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    dpr = Math.min(window.devicePixelRatio || 1, 1.5);
     W = cv.clientWidth; H = cv.clientHeight;
     cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
@@ -355,7 +370,7 @@
   }
   function startPetals() {
     if (running || reduce) return; running = true;
-    const n = W < 600 ? 20 : 38;
+    const n = W < 600 ? 14 : 30;
     setTimeout(() => { for (let i = 0; i < n; i++) petals.push(newPetal(true)); }, 3200);
     (function loop() {
       ctx.clearRect(0, 0, W, H);

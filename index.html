@@ -29,50 +29,7 @@
       <feDisplacementMap in="SourceGraphic" in2="n" scale="8" xChannelSelector="R" yChannelSelector="G"/>
       <feGaussianBlur stdDeviation="0.5"/>
     </filter>
-    <filter id="wc-soft" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" seed="9" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="16" xChannelSelector="R" yChannelSelector="G"/>
-      <feGaussianBlur stdDeviation="1.1"/>
-    </filter>
-    <filter id="wc-fine" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="2" seed="2" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
-      <feGaussianBlur stdDeviation="0.3"/>
-    </filter>
-    <filter id="wc-big" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="12" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="46" xChannelSelector="R" yChannelSelector="G"/>
-      <feGaussianBlur stdDeviation="12"/>
-    </filter>
-    <!-- kağız dənəsi -->
-    <filter id="grain" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="5"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0.42  0 0 0 0 0.38  0 0 0 0 0.32  1.3 0 0 0 -0.5"/>
-    </filter>
-
-    <linearGradient id="skyg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#C9D9C7"/>
-      <stop offset=".45" stop-color="#E3EADA"/>
-      <stop offset="1" stop-color="#F6F2E5"/>
-    </linearGradient>
-    <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#BDCDA9"/>
-      <stop offset=".4" stop-color="#A6BD96"/>
-      <stop offset="1" stop-color="#84A074"/>
-    </linearGradient>
-    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#F2E6D2"/>
-      <stop offset="1" stop-color="#DCC8AB"/>
-    </linearGradient>
-    <linearGradient id="pathg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#EFE5D0"/>
-      <stop offset="1" stop-color="#F7F0E0"/>
-    </linearGradient>
-    <linearGradient id="gown" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#FBF6EA"/>
-      <stop offset=".6" stop-color="#F4EBD9"/>
-      <stop offset="1" stop-color="#E3D5BC"/>
-    </linearGradient>
+    
     <linearGradient id="dressg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#9FB4C7"/>
       <stop offset="1" stop-color="#6F8AA3"/>
@@ -126,16 +83,10 @@
 
 <!-- ============ HERO: illüstrasiya ============ -->
 <header class="hero" id="top">
-  <div class="layer" data-depth="0.012"><svg class="in in-sky" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <rect x="-700" width="2600" height="900" fill="url(#skyg)"/>
-    <g filter="url(#wc-big)">
-      <ellipse cx="190" cy="120" rx="270" ry="100" fill="#B9CDBB" opacity=".55"/>
-      <ellipse cx="1010" cy="170" rx="300" ry="110" fill="#C3D5E4" opacity=".6"/>
-      <ellipse cx="620" cy="70" rx="260" ry="70" fill="#FFFFFF" opacity=".55"/>
-      <ellipse cx="900" cy="330" rx="200" ry="50" fill="#FFFFFF" opacity=".5"/>
-      <ellipse cx="260" cy="360" rx="220" ry="46" fill="#FFFFFF" opacity=".45"/>
-      <ellipse cx="600" cy="500" rx="520" ry="90" fill="#F9F4E6" opacity=".7"/>
-    </g>
+  <!-- Illustrasiya hazır WebP şəkillərdir (assets/scene). Mənbə: git tag svg-source, _tools/bake.js -->
+  <div class="layer" data-depth="0.02"><svg class="in in-back" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <image data-set="p" data-src="assets/scene/back-p.webp" x="250" y="0" width="700" height="680" display="none"/>
+    <image data-set="w" data-src="assets/scene/back-w.webp" x="-250" y="0" width="1700" height="680" display="none"/>
   </svg></div>
 
   <div class="layer birds" data-depth="0.02" aria-hidden="true">
@@ -144,176 +95,19 @@
     <svg class="bird b3" viewBox="0 0 30 12"><path d="M1 8 Q 8 -2 15 7 Q 22 -2 29 8" fill="none" stroke="#5B6D7E" stroke-width="1.3" stroke-linecap="round"/></svg>
   </div>
 
-  <div class="layer" data-depth="0.02"><svg class="in in-far" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <g filter="url(#wc-soft)">
-      <path d="M-700 585 L-40 585 C 120 540 260 548 420 566 C 560 580 700 560 820 552 C 960 540 1100 548 1240 575 L1900 575 L1900 660 L-700 660Z" fill="#A9BE9F" opacity=".85"/>
-      <path d="M-700 604 L-40 604 C 160 574 320 586 520 596 C 720 600 900 576 1240 598 L1900 598 L1900 660 L-700 660Z" fill="#B7CAA9" opacity=".9"/>
-    </g>
-    <g id="trees-far" filter="url(#wc)"></g>
-  </svg></div>
-
-  <div class="layer" data-depth="0.03"><svg class="in in-manor" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <g filter="url(#wc)">
-      <ellipse cx="600" cy="606" rx="260" ry="12" fill="#6F8A66" opacity=".38"/>
-
-      <!-- yan qanadlar -->
-      <rect x="392" y="500" width="62" height="104" fill="#E7D6BD"/>
-      <rect x="426" y="500" width="28" height="104" fill="#CDB899" opacity=".35"/>
-      <polygon points="380,502 398,466 448,466 466,502" fill="#5F7489"/>
-      <polygon points="398,466 448,466 444,472 402,472" fill="#7B91A5"/>
-      <rect x="746" y="500" width="62" height="104" fill="#DCC9AF"/>
-      <rect x="778" y="500" width="30" height="104" fill="#BBA283" opacity=".35"/>
-      <polygon points="734,502 752,466 802,466 820,502" fill="#566B80"/>
-      <polygon points="752,466 802,466 798,472 756,472" fill="#72889C"/>
-
-      <!-- əsas bina -->
-      <rect x="450" y="440" width="300" height="164" fill="url(#wall)"/>
-      <rect x="640" y="440" width="110" height="164" fill="#B79C7C" opacity=".22"/>
-      <rect x="450" y="596" width="300" height="8" fill="#CBB898"/>
-      <!-- dam -->
-      <polygon points="432,442 462,394 738,394 768,442" fill="#61768C"/>
-      <polygon points="462,394 738,394 731,403 469,403" fill="#7F95A9"/>
-      <g stroke="#4E6277" stroke-width="1.2" opacity=".55">
-        <line x1="447" y1="412" x2="753" y2="412"/><line x1="440" y1="426" x2="760" y2="426"/>
-      </g>
-      <polygon points="432,442 768,442 768,448 432,448" fill="#4F6379"/>
-      <!-- bacalar -->
-      <rect x="478" y="368" width="16" height="36" fill="#B8836A"/><rect x="475" y="364" width="22" height="6" fill="#8F6450"/>
-      <rect x="706" y="368" width="16" height="36" fill="#A87762"/><rect x="703" y="364" width="22" height="6" fill="#86604C"/>
-      <!-- dormerlər -->
-      <g>
-        <rect x="473" y="404" width="20" height="30" fill="#EBDDC8"/><rect x="478" y="410" width="10" height="20" fill="#4A5E72"/>
-        <polygon points="469,404 483,388 497,404" fill="#52677C"/>
-        <rect x="707" y="404" width="20" height="30" fill="#E1D0B6"/><rect x="712" y="410" width="10" height="20" fill="#4A5E72"/>
-        <polygon points="703,404 717,388 731,404" fill="#4B6075"/>
-      </g>
-
-      <!-- mərkəzi köşk -->
-      <rect x="538" y="396" width="124" height="208" fill="#F3E9D7"/>
-      <rect x="630" y="396" width="32" height="208" fill="#B79C7C" opacity=".16"/>
-      <polygon points="524,398 548,342 652,342 676,398" fill="#5A6F85"/>
-      <polygon points="548,342 566,318 634,318 652,342" fill="#6B8196"/>
-      <polygon points="566,318 634,318 631,324 569,324" fill="#8AA0B3"/>
-      <rect x="598" y="284" width="4" height="36" fill="#4B5E72"/>
-      <polygon points="602,286 620,292 602,298" fill="#C98F86"/>
-      <circle cx="600" cy="372" r="12" fill="#FBF6EA" stroke="#B79C62" stroke-width="1.6"/>
-      <path d="M600 372 V364 M600 372 L606 376" stroke="#6B5B3E" stroke-width="1.4" stroke-linecap="round"/>
-      <rect x="538" y="394" width="124" height="5" fill="#CFBB9C"/>
-      <rect x="534" y="456" width="132" height="5" fill="#D8C7AA"/>
-
-      <!-- pəncərələr: mərkəz -->
-      <g fill="#4A5E72" stroke="#FBF6EA" stroke-width="2">
-        <path d="M560 464 V430 a11 11 0 0 1 22 0 V464Z"/><path d="M618 464 V430 a11 11 0 0 1 22 0 V464Z"/>
-        <path d="M560 518 V490 a11 11 0 0 1 22 0 V518Z"/><path d="M618 518 V490 a11 11 0 0 1 22 0 V518Z"/>
-      </g>
-      <rect x="552" y="518" width="38" height="4" fill="#E6D6BA"/><rect x="610" y="518" width="38" height="4" fill="#E6D6BA"/>
-      <!-- yan pəncərələr -->
-      <g fill="#4A5E72" stroke="#FBF6EA" stroke-width="1.6">
-        <path d="M470 482 V462 a8 8 0 0 1 16 0 V482Z"/><path d="M494 482 V462 a8 8 0 0 1 16 0 V482Z"/><path d="M518 482 V462 a8 8 0 0 1 16 0 V482Z"/>
-        <path d="M682 482 V462 a8 8 0 0 1 16 0 V482Z"/><path d="M706 482 V462 a8 8 0 0 1 16 0 V482Z"/><path d="M730 482 V462 a8 8 0 0 1 16 0 V482Z"/>
-        <path d="M470 552 V516 a8 8 0 0 1 16 0 V552Z"/><path d="M494 552 V516 a8 8 0 0 1 16 0 V552Z"/><path d="M518 552 V516 a8 8 0 0 1 16 0 V552Z"/>
-        <path d="M682 552 V516 a8 8 0 0 1 16 0 V552Z"/><path d="M706 552 V516 a8 8 0 0 1 16 0 V552Z"/><path d="M730 552 V516 a8 8 0 0 1 16 0 V552Z"/>
-        <path d="M414 560 V524 a9 9 0 0 1 18 0 V560Z"/><path d="M768 560 V524 a9 9 0 0 1 18 0 V560Z"/>
-      </g>
-      <!-- giriş qapısı -->
-      <path d="M582 604 V562 a18 18 0 0 1 36 0 V604Z" fill="#3E5165" stroke="#FBF6EA" stroke-width="2.5"/>
-      <path d="M600 544 V604 M582 568 H618" stroke="#8FA3B5" stroke-width="1.2" opacity=".6"/>
-      <path d="M570 540 q30 -26 60 0" fill="none" stroke="#D5C3A3" stroke-width="3"/>
-      <rect x="564" y="604" width="72" height="6" fill="#DCCBAE"/><rect x="570" y="610" width="60" height="5" fill="#CDBB9D"/>
-      <!-- fənərlər -->
-      <g fill="#F7DC9B" opacity=".9"><circle cx="572" cy="560" r="3"/><circle cx="628" cy="560" r="3"/></g>
-    </g>
-  </svg></div>
-
   <div class="layer" data-depth="0.05"><svg class="in in-ground" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <g filter="url(#wc-soft)">
-      <path d="M-700 598 L-40 598 C 200 586 420 592 600 594 C 800 592 1000 586 1240 598 L1900 598 L1900 940 L-700 940Z" fill="url(#lawn)"/>
-      <ellipse cx="170" cy="700" rx="200" ry="40" fill="#CDDBB6" opacity=".55"/>
-      <ellipse cx="1040" cy="740" rx="230" ry="46" fill="#CDDBB6" opacity=".5"/>
-      <ellipse cx="280" cy="850" rx="260" ry="50" fill="#7C976C" opacity=".4"/>
-      <ellipse cx="940" cy="880" rx="280" ry="50" fill="#7C976C" opacity=".4"/>
-    </g>
-    <g filter="url(#wc)">
-      <polygon points="586,598 614,598 790,910 410,910" fill="url(#pathg)"/>
-      <polyline points="586,598 410,910" fill="none" stroke="#D5C4A5" stroke-width="2" opacity=".7"/>
-      <polyline points="614,598 790,910" fill="none" stroke="#D5C4A5" stroke-width="2" opacity=".7"/>
-    </g>
-    <g id="gravel" filter="url(#wc-fine)"></g>
-    <g id="hedges" filter="url(#wc-fine)"></g>
-    <g id="beds" filter="url(#wc-fine)"></g>
+    <image data-set="p" data-src="assets/scene/ground-p.webp" x="250" y="560" width="700" height="340" display="none"/>
+    <image data-set="w" data-src="assets/scene/ground-w.webp" x="-250" y="560" width="1700" height="340" display="none"/>
   </svg></div>
 
   <div class="layer" data-depth="0.07"><svg class="in in-couple" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMax slice" aria-label="Gəlin və bəy əl-ələ şatoya doğru gedir" role="img">
-    <g filter="url(#wc-fine)">
-      <ellipse cx="632" cy="868" rx="140" ry="13" fill="#5F7551" opacity=".38"/>
-
-      <!-- ===== BƏY ===== -->
-      <g>
-        <!-- şalvar -->
-        <path d="M532 738 L568 738 L566 856 L553 856 L550 774 L547 856 L534 856 Z" fill="#2B3645"/>
-        <path d="M550 774 L553 856 L566 856 L568 738 Z" fill="#1F2833" opacity=".45"/>
-        <ellipse cx="540" cy="860" rx="10" ry="4.5" fill="#171C24"/><ellipse cx="559" cy="860" rx="10" ry="4.5" fill="#171C24"/>
-        <!-- pencək -->
-        <path d="M525 636 Q549 622 573 636 L580 672 L576 750 Q549 758 522 750 L518 672 Z" fill="#35445A"/>
-        <path d="M549 628 V752" stroke="#22303F" stroke-width="1.4" opacity=".7"/>
-        <path d="M549 722 L541 752 M549 722 L557 752" stroke="#22303F" stroke-width="1.1" opacity=".6"/>
-        <path d="M562 640 Q580 660 576 700" stroke="#4A5C75" stroke-width="2" fill="none" opacity=".6"/>
-        <!-- sol qol -->
-        <path d="M522 640 Q514 690 520 742" stroke="#35445A" stroke-width="13" fill="none" stroke-linecap="round"/>
-        <circle cx="520" cy="747" r="5.2" fill="#E6C0A0"/>
-        <!-- sağ qol (gəlinə doğru) -->
-        <path d="M572 642 Q592 674 600 722" stroke="#35445A" stroke-width="12.5" fill="none" stroke-linecap="round"/>
-        <!-- boyun və baş -->
-        <rect x="541" y="618" width="16" height="18" rx="4" fill="#DDB391"/>
-        <path d="M539 633 Q549 640 559 633 L559 637 Q549 645 539 637Z" fill="#F7F3EA"/>
-        <ellipse cx="549" cy="603" rx="16" ry="18" fill="#2B2220"/>
-        <ellipse cx="533" cy="607" rx="3.2" ry="4.8" fill="#DDB391"/><ellipse cx="565" cy="607" rx="3.2" ry="4.8" fill="#DDB391"/>
-        <path d="M535 612 Q549 626 563 612" stroke="#1D1615" stroke-width="5" fill="none" opacity=".5"/>
-      </g>
-
-      <!-- ===== GƏLİN ===== -->
-      <g>
-        <!-- paltar: ətək + qatar -->
-        <path d="M634 700 C 624 764, 592 826, 560 872 Q 600 892, 646 884 Q 698 894, 746 870 C 716 826, 676 764, 666 700 Z" fill="url(#gown)"/>
-        <path d="M640 708 C 634 770, 612 830, 596 880 M650 708 C 650 780, 646 840, 646 886 M660 708 C 668 770, 690 830, 706 884 M634 740 C 616 790, 596 840, 580 874 M672 740 C 692 790, 716 840, 732 872" stroke="#D6C6A8" stroke-width="1.6" fill="none" opacity=".7"/>
-        <path d="M560 872 Q 600 892 646 884 Q 698 894 746 870" fill="none" stroke="#EAD9C3" stroke-width="3" opacity=".9"/>
-        <!-- korset -->
-        <path d="M632 648 Q650 640 668 648 L667 704 Q650 710 633 704 Z" fill="#FBF6EA"/>
-        <path d="M640 650 Q650 668 660 650" fill="#E3BC9C"/>
-        <g fill="#E4D4B8"><circle cx="650" cy="672" r="1.5"/><circle cx="650" cy="682" r="1.5"/><circle cx="650" cy="692" r="1.5"/></g>
-        <rect x="633" y="700" width="34" height="5" fill="#C99A8E" opacity=".85"/>
-        <!-- duvak -->
-        <path d="M644 598 C 616 642, 614 724, 604 806 Q 650 820 698 800 C 690 724, 686 642, 658 598 Z" fill="#FFFFFF" opacity=".5"/>
-        <path d="M604 806 Q 650 820 698 800" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".8"/>
-        <path d="M630 650 C 622 700, 618 750, 612 800 M672 650 C 680 700, 684 750, 692 798" stroke="#E7DCC6" stroke-width="1.2" fill="none" opacity=".7"/>
-        <!-- qollar -->
-        <path d="M634 655 Q612 688 602 722" stroke="#E6C0A0" stroke-width="7.5" fill="none" stroke-linecap="round"/>
-        <circle cx="601" cy="727" r="5.4" fill="#EBC8AA"/>
-        <path d="M666 655 Q678 690 676 722" stroke="#E6C0A0" stroke-width="7.5" fill="none" stroke-linecap="round"/>
-        <!-- buket -->
-        <g>
-          <path d="M676 720 q-6 14 -2 24 M676 720 q10 12 6 22" stroke="#6F8A62" stroke-width="2" fill="none"/>
-          <ellipse cx="668" cy="745" rx="9" ry="4" fill="#7E9970" transform="rotate(-24 668 745)"/>
-          <ellipse cx="686" cy="745" rx="9" ry="4" fill="#7E9970" transform="rotate(26 686 745)"/>
-          <circle cx="676" cy="732" r="8.5" fill="#F2C9C4"/><circle cx="668" cy="728" r="6.5" fill="#FBF6EA"/>
-          <circle cx="684" cy="728" r="6.5" fill="#E9AAB0"/><circle cx="676" cy="722" r="5.5" fill="#FBF6EA"/>
-          <circle cx="670" cy="737" r="4.5" fill="#B7AAD0"/><circle cx="684" cy="737" r="4.5" fill="#F5DDD8"/>
-        </g>
-        <!-- boyun və baş -->
-        <rect x="644" y="627" width="12" height="20" rx="4" fill="#EBC8AA"/>
-        <ellipse cx="650" cy="613" rx="13.5" ry="16" fill="#4E3427"/>
-        <circle cx="650" cy="595" r="8.5" fill="#4E3427"/>
-        <ellipse cx="637" cy="617" rx="2.4" ry="4" fill="#EBC8AA"/><ellipse cx="663" cy="617" rx="2.4" ry="4" fill="#EBC8AA"/>
-        <!-- çiçək tacı -->
-        <g><circle cx="640" cy="600" r="3.2" fill="#F5DDD8"/><circle cx="650" cy="588" r="3.6" fill="#E9AAB0"/><circle cx="660" cy="600" r="3.2" fill="#FBF6EA"/><circle cx="650" cy="601" r="2.4" fill="#B7AAD0"/></g>
-      </g>
-    </g>
+    <image href="assets/scene/couple.webp" x="500" y="570" width="280" height="330"/>
   </svg></div>
 
-  <div class="layer fgt fgt-l" data-depth="0.09"><svg class="in in-fgtl sway" id="fg-tl" viewBox="0 0 560 330" preserveAspectRatio="xMinYMin meet" aria-hidden="true"></svg></div>
-  <div class="layer fgt fgt-r" data-depth="0.09"><svg class="in in-fgtr sway2" id="fg-tr" viewBox="0 0 560 330" preserveAspectRatio="xMaxYMin meet" aria-hidden="true"></svg></div>
-  <div class="layer fgb fgb-l" data-depth="0.11"><svg class="in in-fgbl" id="fg-bl" viewBox="0 0 520 300" preserveAspectRatio="xMinYMax meet" aria-hidden="true"></svg></div>
-  <div class="layer fgb fgb-r" data-depth="0.11"><svg class="in in-fgbr" id="fg-br" viewBox="0 0 520 300" preserveAspectRatio="xMaxYMax meet" aria-hidden="true"></svg></div>
+  <div class="layer fgt fgt-l" data-depth="0.09"><svg class="in in-fgtl sway" viewBox="0 0 560 330" preserveAspectRatio="xMinYMin meet" aria-hidden="true"><image href="assets/scene/fg-tl.webp" width="560" height="330"/></svg></div>
+  <div class="layer fgt fgt-r" data-depth="0.09"><svg class="in in-fgtr sway2" viewBox="0 0 560 330" preserveAspectRatio="xMaxYMin meet" aria-hidden="true"><image href="assets/scene/fg-tr.webp" width="560" height="330"/></svg></div>
+  <div class="layer fgb fgb-l" data-depth="0.11"><svg class="in in-fgbl" viewBox="0 0 520 300" preserveAspectRatio="xMinYMax meet" aria-hidden="true"><image href="assets/scene/fg-bl.webp" width="520" height="300"/></svg></div>
+  <div class="layer fgb fgb-r" data-depth="0.11"><svg class="in in-fgbr" viewBox="0 0 520 300" preserveAspectRatio="xMaxYMax meet" aria-hidden="true"><image href="assets/scene/fg-br.webp" width="520" height="300"/></svg></div>
 
   <canvas id="petals" aria-hidden="true"></canvas>
 
@@ -330,7 +124,7 @@
   </a>
 
   <svg class="hero-edge" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
-    <path filter="url(#wc)" d="M-20 70 C 120 30 240 90 380 62 C 520 34 640 94 780 64 C 920 36 1060 88 1220 52 L1220 140 L-20 140Z" fill="#F7F4EA"/>
+    <path d="M-20 70 C 120 30 240 90 380 62 C 520 34 640 94 780 64 C 920 36 1060 88 1220 52 L1220 140 L-20 140Z" fill="#F7F4EA"/>
   </svg>
 </header>
 
@@ -515,7 +309,6 @@
 </button>
 
 <script src="js/config.js"></script>
-<script src="js/scene.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

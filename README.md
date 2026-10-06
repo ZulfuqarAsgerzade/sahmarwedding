@@ -19,7 +19,8 @@ Bütün məlumatlar **`js/config.js`** faylındadır:
 ## Fayllar
 - `index.html` — səhifə və əl ilə çəkilmiş suluboya SVG səhnə
 - `css/style.css` — dizayn
-- `js/scene.js` — ağaclar, çitlər, çiçəklər, budaqlar (proseduryal suluboya)
+- `assets/scene/*.webp` — hazır ("bake" edilmiş) suluboya illustrasiya qatları; telefon üçün `-p`, geniş ekran üçün `-w`
+- `_tools/` — illustrasiyanı yenidən hazırlamaq üçün alətlər (saytla yerləşdirilmir)
 - `js/main.js` — taymer, təqvim, proqram, RSVP, ləçək animasiyası
 
 Sürətli test üçün `index.html#skip` giriş möhürünü keçir.
@@ -29,3 +30,7 @@ Mahnı `assets/music.m4a` faylıdır (orijinal mp3 `_original/` qovluğunda saxl
 Möhürə toxunanda fayl `startAt` saniyəsindən (kəsilmiş fayl üçün 0) çox aşağı səslə başlayır, bitəndə `loopFade` saniyə ərzində yumşaq sönüb yenidən başlayır.
 Başqa mahnı qoymaq üçün `config.js`-də `music.src`-ni dəyiş. Fayl yoxdursa səs düyməsi görünmür, sayt normal işləyir.
 Saytı yerləşdirəcəyin host `Range` sorğularını dəstəkləməlidir (Netlify, Vercel, GitHub Pages dəstəkləyir).
+
+## Illustrasiyanı dəyişmək
+Səhnə əvvəl canlı SVG idi (7000+ element, ağır filtrlər) və telefonda lag edirdi. İndi hazır WebP şəkillərdir.
+SVG mənbəsi `svg-source` git etiketindədir: `git checkout svg-source`. Dəyişiklikdən sonra `_tools/bake.js` ilə şəkillər yenidən yazılır.
