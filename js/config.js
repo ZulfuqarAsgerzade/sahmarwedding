@@ -16,8 +16,8 @@ window.INVITE = {
 
   // RSVP son tarix (mətn kimi göstərilir)
   rsvpBy: "10 oktyabr",
-  // WhatsApp nömrəsi: ölkə kodu ilə, + və boşluqsuz (DƏYİŞ)
-  whatsapp: "994500000000",
+  // WhatsApp nömrəsi: ölkə kodu ilə, + və boşluqsuz (+994 51 574 99 94)
+  whatsapp: "994515749994",
 
   // Arxa fon musiqisi: faylı assets/ qovluğuna at və adını src-də yaz.
   // startAt = başlama saniyəsi (kəsilmiş fayl üçün 0), volume = 0..1 (çox aşağı: 0.12–0.18),
