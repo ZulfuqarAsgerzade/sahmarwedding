@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Şahmar &amp; Aydan · Nişan dəvətnaməsi</title>
+<meta name="description" content="Sizi nişan mərasimimizə dəvət edirik — 15 oktyabr 2026.">
+<meta name="theme-color" content="#E4EADB">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:title" content="Şahmar & Aydan · Nişan dəvətnaməsi">
+<meta property="og:description" content="Sizi sevincimizi bölüşməyə dəvət edirik — 15 oktyabr 2026.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<!-- ============ ORTAQ SVG TƏRİFLƏR (filtrlər, qradiyentlər, naxışlar) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- suluboya kənar: dalğalı + yumşaq -->
+    <filter id="wc" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="4" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="0.5"/>
+    </filter>
+    <filter id="wc-soft" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="16" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="1.1"/>
+    </filter>
+    <filter id="wc-fine" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.07" numOctaves="2" seed="2" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="0.3"/>
+    </filter>
+    <filter id="wc-big" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="12" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="46" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <!-- kağız dənəsi -->
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="5"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.42  0 0 0 0 0.38  0 0 0 0 0.32  1.3 0 0 0 -0.5"/>
+    </filter>
+
+    <linearGradient id="skyg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C9D9C7"/>
+      <stop offset=".45" stop-color="#E3EADA"/>
+      <stop offset="1" stop-color="#F6F2E5"/>
+    </linearGradient>
+    <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#BDCDA9"/>
+      <stop offset=".4" stop-color="#A6BD96"/>
+      <stop offset="1" stop-color="#84A074"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F2E6D2"/>
+      <stop offset="1" stop-color="#DCC8AB"/>
+    </linearGradient>
+    <linearGradient id="pathg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EFE5D0"/>
+      <stop offset="1" stop-color="#F7F0E0"/>
+    </linearGradient>
+    <linearGradient id="gown" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FBF6EA"/>
+      <stop offset=".6" stop-color="#F4EBD9"/>
+      <stop offset="1" stop-color="#E3D5BC"/>
+    </linearGradient>
+    <linearGradient id="dressg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9FB4C7"/>
+      <stop offset="1" stop-color="#6F8AA3"/>
+    </linearGradient>
+
+    <!-- zərif budaq (ayırıcı) -->
+    <symbol id="sprig" viewBox="0 0 260 40">
+      <g fill="none" stroke="#8DA38A" stroke-width="1.3" stroke-linecap="round">
+        <path d="M6 20 Q 70 14 130 20 T 254 20"/>
+      </g>
+      <g fill="#A4B8A0" opacity=".9">
+        <path d="M40 19 q-8 -14 -22 -14 q4 12 22 14z"/>
+        <path d="M40 21 q-8 14 -22 14 q4 -12 22 -14z"/>
+        <path d="M78 17 q-6 -13 -19 -15 q2 12 19 15z"/>
+        <path d="M78 23 q-6 13 -19 15 q2 -12 19 -15z"/>
+        <path d="M220 19 q8 -14 22 -14 q-4 12 -22 14z"/>
+        <path d="M220 21 q8 14 22 14 q-4 -12 -22 -14z"/>
+        <path d="M182 17 q6 -13 19 -15 q-2 12 -19 15z"/>
+        <path d="M182 23 q6 13 19 15 q-2 -12 -19 -15z"/>
+      </g>
+      <g>
+        <circle cx="130" cy="20" r="5" fill="#E9C3BC"/>
+        <circle cx="130" cy="20" r="2" fill="#C99A7D"/>
+        <circle cx="116" cy="17" r="3" fill="#F3DAD4"/>
+        <circle cx="144" cy="23" r="3" fill="#F3DAD4"/>
+      </g>
+    </symbol>
+
+    <symbol id="heart-ring" viewBox="0 0 60 60">
+      <path d="M30 50 C 8 36, 6 18, 18 13 C 25 10, 30 16, 30 18 C 30 16, 35 10, 42 13 C 54 18, 52 36, 30 50Z" fill="none" stroke="#C79A8E" stroke-width="1.6" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============ GİRİŞ DƏRVAZASI ============ -->
+<div class="gate" id="gate" role="dialog" aria-label="Dəvətnaməni aç">
+  <div class="gate-panel gate-l"></div>
+  <div class="gate-panel gate-r"></div>
+  <div class="gate-card">
+    <svg class="gate-sprig" aria-hidden="true"><use href="#sprig"/></svg>
+    <p class="eyebrow">Dəvətnamə</p>
+    <h1 class="gate-names script"><span data-bind="groom"></span><i>&amp;</i><span data-bind="bride"></span></h1>
+    <p class="gate-sub">Sizi sevincimizə dəvət edirik</p>
+    <button class="seal" id="open" type="button" aria-label="Dəvətnaməni aç">
+      <span class="seal-ring"></span>
+      <span class="seal-mono script"><span data-bind="groomInitial"></span><i>&amp;</i><span data-bind="brideInitial"></span></span>
+    </button>
+    <p class="gate-hint">Açmaq üçün möhürə toxunun</p>
+  </div>
+</div>
+
+<!-- ============ HERO: illüstrasiya ============ -->
+<header class="hero" id="top">
+  <div class="layer" data-depth="0.012"><svg class="in in-sky" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <rect x="-700" width="2600" height="900" fill="url(#skyg)"/>
+    <g filter="url(#wc-big)">
+      <ellipse cx="190" cy="120" rx="270" ry="100" fill="#B9CDBB" opacity=".55"/>
+      <ellipse cx="1010" cy="170" rx="300" ry="110" fill="#C3D5E4" opacity=".6"/>
+      <ellipse cx="620" cy="70" rx="260" ry="70" fill="#FFFFFF" opacity=".55"/>
+      <ellipse cx="900" cy="330" rx="200" ry="50" fill="#FFFFFF" opacity=".5"/>
+      <ellipse cx="260" cy="360" rx="220" ry="46" fill="#FFFFFF" opacity=".45"/>
+      <ellipse cx="600" cy="500" rx="520" ry="90" fill="#F9F4E6" opacity=".7"/>
+    </g>
+  </svg></div>
+
+  <div class="layer birds" data-depth="0.02" aria-hidden="true">
+    <svg class="bird b1" viewBox="0 0 30 12"><path d="M1 8 Q 8 -2 15 7 Q 22 -2 29 8" fill="none" stroke="#5B6D7E" stroke-width="1.3" stroke-linecap="round"/></svg>
+    <svg class="bird b2" viewBox="0 0 30 12"><path d="M1 8 Q 8 -2 15 7 Q 22 -2 29 8" fill="none" stroke="#5B6D7E" stroke-width="1.3" stroke-linecap="round"/></svg>
+    <svg class="bird b3" viewBox="0 0 30 12"><path d="M1 8 Q 8 -2 15 7 Q 22 -2 29 8" fill="none" stroke="#5B6D7E" stroke-width="1.3" stroke-linecap="round"/></svg>
+  </div>
+
+  <div class="layer" data-depth="0.02"><svg class="in in-far" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <g filter="url(#wc-soft)">
+      <path d="M-700 585 L-40 585 C 120 540 260 548 420 566 C 560 580 700 560 820 552 C 960 540 1100 548 1240 575 L1900 575 L1900 660 L-700 660Z" fill="#A9BE9F" opacity=".85"/>
+      <path d="M-700 604 L-40 604 C 160 574 320 586 520 596 C 720 600 900 576 1240 598 L1900 598 L1900 660 L-700 660Z" fill="#B7CAA9" opacity=".9"/>
+    </g>
+    <g id="trees-far" filter="url(#wc)"></g>
+  </svg></div>
+
+  <div class="layer" data-depth="0.03"><svg class="in in-manor" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <g filter="url(#wc)">
+      <ellipse cx="600" cy="606" rx="260" ry="12" fill="#6F8A66" opacity=".38"/>
+
+      <!-- yan qanadlar -->
+      <rect x="392" y="500" width="62" height="104" fill="#E7D6BD"/>
+      <rect x="426" y="500" width="28" height="104" fill="#CDB899" opacity=".35"/>
+      <polygon points="380,502 398,466 448,466 466,502" fill="#5F7489"/>
+      <polygon points="398,466 448,466 444,472 402,472" fill="#7B91A5"/>
+      <rect x="746" y="500" width="62" height="104" fill="#DCC9AF"/>
+      <rect x="778" y="500" width="30" height="104" fill="#BBA283" opacity=".35"/>
+      <polygon points="734,502 752,466 802,466 820,502" fill="#566B80"/>
+      <polygon points="752,466 802,466 798,472 756,472" fill="#72889C"/>
+
+      <!-- əsas bina -->
+      <rect x="450" y="440" width="300" height="164" fill="url(#wall)"/>
+      <rect x="640" y="440" width="110" height="164" fill="#B79C7C" opacity=".22"/>
+      <rect x="450" y="596" width="300" height="8" fill="#CBB898"/>
+      <!-- dam -->
+      <polygon points="432,442 462,394 738,394 768,442" fill="#61768C"/>
+      <polygon points="462,394 738,394 731,403 469,403" fill="#7F95A9"/>
+      <g stroke="#4E6277" stroke-width="1.2" opacity=".55">
+        <line x1="447" y1="412" x2="753" y2="412"/><line x1="440" y1="426" x2="760" y2="426"/>
+      </g>
+      <polygon points="432,442 768,442 768,448 432,448" fill="#4F6379"/>
+      <!-- bacalar -->
+      <rect x="478" y="368" width="16" height="36" fill="#B8836A"/><rect x="475" y="364" width="22" height="6" fill="#8F6450"/>
+      <rect x="706" y="368" width="16" height="36" fill="#A87762"/><rect x="703" y="364" width="22" height="6" fill="#86604C"/>
+      <!-- dormerlər -->
+      <g>
+        <rect x="473" y="404" width="20" height="30" fill="#EBDDC8"/><rect x="478" y="410" width="10" height="20" fill="#4A5E72"/>
+        <polygon points="469,404 483,388 497,404" fill="#52677C"/>
+        <rect x="707" y="404" width="20" height="30" fill="#E1D0B6"/><rect x="712" y="410" width="10" height="20" fill="#4A5E72"/>
+        <polygon points="703,404 717,388 731,404" fill="#4B6075"/>
+      </g>
+
+      <!-- mərkəzi köşk -->
+      <rect x="538" y="396" width="124" height="208" fill="#F3E9D7"/>
+      <rect x="630" y="396" width="32" height="208" fill="#B79C7C" opacity=".16"/>
+      <polygon points="524,398 548,342 652,342 676,398" fill="#5A6F85"/>
+      <polygon points="548,342 566,318 634,318 652,342" fill="#6B8196"/>
+      <polygon points="566,318 634,318 631,324 569,324" fill="#8AA0B3"/>
+      <rect x="598" y="284" width="4" height="36" fill="#4B5E72"/>
+      <polygon points="602,286 620,292 602,298" fill="#C98F86"/>
+      <circle cx="600" cy="372" r="12" fill="#FBF6EA" stroke="#B79C62" stroke-width="1.6"/>
+      <path d="M600 372 V364 M600 372 L606 376" stroke="#6B5B3E" stroke-width="1.4" stroke-linecap="round"/>
+      <rect x="538" y="394" width="124" height="5" fill="#CFBB9C"/>
+      <rect x="534" y="456" width="132" height="5" fill="#D8C7AA"/>
+
+      <!-- pəncərələr: mərkəz -->
+      <g fill="#4A5E72" stroke="#FBF6EA" stroke-width="2">
+        <path d="M560 464 V430 a11 11 0 0 1 22 0 V464Z"/><path d="M618 464 V430 a11 11 0 0 1 22 0 V464Z"/>
+        <path d="M560 518 V490 a11 11 0 0 1 22 0 V518Z"/><path d="M618 518 V490 a11 11 0 0 1 22 0 V518Z"/>
+      </g>
+      <rect x="552" y="518" width="38" height="4" fill="#E6D6BA"/><rect x="610" y="518" width="38" height="4" fill="#E6D6BA"/>
+      <!-- yan pəncərələr -->
+      <g fill="#4A5E72" stroke="#FBF6EA" stroke-width="1.6">
+        <path d="M470 482 V462 a8 8 0 0 1 16 0 V482Z"/><path d="M494 482 V462 a8 8 0 0 1 16 0 V482Z"/><path d="M518 482 V462 a8 8 0 0 1 16 0 V482Z"/>
+        <path d="M682 482 V462 a8 8 0 0 1 16 0 V482Z"/><path d="M706 482 V462 a8 8 0 0 1 16 0 V482Z"/><path d="M730 482 V462 a8 8 0 0 1 16 0 V482Z"/>
+        <path d="M470 552 V516 a8 8 0 0 1 16 0 V552Z"/><path d="M494 552 V516 a8 8 0 0 1 16 0 V552Z"/><path d="M518 552 V516 a8 8 0 0 1 16 0 V552Z"/>
+        <path d="M682 552 V516 a8 8 0 0 1 16 0 V552Z"/><path d="M706 552 V516 a8 8 0 0 1 16 0 V552Z"/><path d="M730 552 V516 a8 8 0 0 1 16 0 V552Z"/>
+        <path d="M414 560 V524 a9 9 0 0 1 18 0 V560Z"/><path d="M768 560 V524 a9 9 0 0 1 18 0 V560Z"/>
+      </g>
+      <!-- giriş qapısı -->
+      <path d="M582 604 V562 a18 18 0 0 1 36 0 V604Z" fill="#3E5165" stroke="#FBF6EA" stroke-width="2.5"/>
+      <path d="M600 544 V604 M582 568 H618" stroke="#8FA3B5" stroke-width="1.2" opacity=".6"/>
+      <path d="M570 540 q30 -26 60 0" fill="none" stroke="#D5C3A3" stroke-width="3"/>
+      <rect x="564" y="604" width="72" height="6" fill="#DCCBAE"/><rect x="570" y="610" width="60" height="5" fill="#CDBB9D"/>
+      <!-- fənərlər -->
+      <g fill="#F7DC9B" opacity=".9"><circle cx="572" cy="560" r="3"/><circle cx="628" cy="560" r="3"/></g>
+    </g>
+  </svg></div>
+
+  <div class="layer" data-depth="0.05"><svg class="in in-ground" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <g filter="url(#wc-soft)">
+      <path d="M-700 598 L-40 598 C 200 586 420 592 600 594 C 800 592 1000 586 1240 598 L1900 598 L1900 940 L-700 940Z" fill="url(#lawn)"/>
+      <ellipse cx="170" cy="700" rx="200" ry="40" fill="#CDDBB6" opacity=".55"/>
+      <ellipse cx="1040" cy="740" rx="230" ry="46" fill="#CDDBB6" opacity=".5"/>
+      <ellipse cx="280" cy="850" rx="260" ry="50" fill="#7C976C" opacity=".4"/>
+      <ellipse cx="940" cy="880" rx="280" ry="50" fill="#7C976C" opacity=".4"/>
+    </g>
+    <g filter="url(#wc)">
+      <polygon points="586,598 614,598 790,910 410,910" fill="url(#pathg)"/>
+      <polyline points="586,598 410,910" fill="none" stroke="#D5C4A5" stroke-width="2" opacity=".7"/>
+      <polyline points="614,598 790,910" fill="none" stroke="#D5C4A5" stroke-width="2" opacity=".7"/>
+    </g>
+    <g id="gravel" filter="url(#wc-fine)"></g>
+    <g id="hedges" filter="url(#wc-fine)"></g>
+    <g id="beds" filter="url(#wc-fine)"></g>
+  </svg></div>
+
+  <div class="layer" data-depth="0.07"><svg class="in in-couple" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMax slice" aria-label="Gəlin və bəy əl-ələ şatoya doğru gedir" role="img">
+    <g filter="url(#wc-fine)">
+      <ellipse cx="632" cy="868" rx="140" ry="13" fill="#5F7551" opacity=".38"/>
+
+      <!-- ===== BƏY ===== -->
+      <g>
+        <!-- şalvar -->
+        <path d="M532 738 L568 738 L566 856 L553 856 L550 774 L547 856 L534 856 Z" fill="#2B3645"/>
+        <path d="M550 774 L553 856 L566 856 L568 738 Z" fill="#1F2833" opacity=".45"/>
+        <ellipse cx="540" cy="860" rx="10" ry="4.5" fill="#171C24"/><ellipse cx="559" cy="860" rx="10" ry="4.5" fill="#171C24"/>
+        <!-- pencək -->
+        <path d="M525 636 Q549 622 573 636 L580 672 L576 750 Q549 758 522 750 L518 672 Z" fill="#35445A"/>
+        <path d="M549 628 V752" stroke="#22303F" stroke-width="1.4" opacity=".7"/>
+        <path d="M549 722 L541 752 M549 722 L557 752" stroke="#22303F" stroke-width="1.1" opacity=".6"/>
+        <path d="M562 640 Q580 660 576 700" stroke="#4A5C75" stroke-width="2" fill="none" opacity=".6"/>
+        <!-- sol qol -->
+        <path d="M522 640 Q514 690 520 742" stroke="#35445A" stroke-width="13" fill="none" stroke-linecap="round"/>
+        <circle cx="520" cy="747" r="5.2" fill="#E6C0A0"/>
+        <!-- sağ qol (gəlinə doğru) -->
+        <path d="M572 642 Q592 674 600 722" stroke="#35445A" stroke-width="12.5" fill="none" stroke-linecap="round"/>
+        <!-- boyun və baş -->
+        <rect x="541" y="618" width="16" height="18" rx="4" fill="#DDB391"/>
+        <path d="M539 633 Q549 640 559 633 L559 637 Q549 645 539 637Z" fill="#F7F3EA"/>
+        <ellipse cx="549" cy="603" rx="16" ry="18" fill="#2B2220"/>
+        <ellipse cx="533" cy="607" rx="3.2" ry="4.8" fill="#DDB391"/><ellipse cx="565" cy="607" rx="3.2" ry="4.8" fill="#DDB391"/>
+        <path d="M535 612 Q549 626 563 612" stroke="#1D1615" stroke-width="5" fill="none" opacity=".5"/>
+      </g>
+
+      <!-- ===== GƏLİN ===== -->
+      <g>
+        <!-- paltar: ətək + qatar -->
+        <path d="M634 700 C 624 764, 592 826, 560 872 Q 600 892, 646 884 Q 698 894, 746 870 C 716 826, 676 764, 666 700 Z" fill="url(#gown)"/>
+        <path d="M640 708 C 634 770, 612 830, 596 880 M650 708 C 650 780, 646 840, 646 886 M660 708 C 668 770, 690 830, 706 884 M634 740 C 616 790, 596 840, 580 874 M672 740 C 692 790, 716 840, 732 872" stroke="#D6C6A8" stroke-width="1.6" fill="none" opacity=".7"/>
+        <path d="M560 872 Q 600 892 646 884 Q 698 894 746 870" fill="none" stroke="#EAD9C3" stroke-width="3" opacity=".9"/>
+        <!-- korset -->
+        <path d="M632 648 Q650 640 668 648 L667 704 Q650 710 633 704 Z" fill="#FBF6EA"/>
+        <path d="M640 650 Q650 668 660 650" fill="#E3BC9C"/>
+        <g fill="#E4D4B8"><circle cx="650" cy="672" r="1.5"/><circle cx="650" cy="682" r="1.5"/><circle cx="650" cy="692" r="1.5"/></g>
+        <rect x="633" y="700" width="34" height="5" fill="#C99A8E" opacity=".85"/>
+        <!-- duvak -->
+        <path d="M644 598 C 616 642, 614 724, 604 806 Q 650 820 698 800 C 690 724, 686 642, 658 598 Z" fill="#FFFFFF" opacity=".5"/>
+        <path d="M604 806 Q 650 820 698 800" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".8"/>
+        <path d="M630 650 C 622 700, 618 750, 612 800 M672 650 C 680 700, 684 750, 692 798" stroke="#E7DCC6" stroke-width="1.2" fill="none" opacity=".7"/>
+        <!-- qollar -->
+        <path d="M634 655 Q612 688 602 722" stroke="#E6C0A0" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+        <circle cx="601" cy="727" r="5.4" fill="#EBC8AA"/>
+        <path d="M666 655 Q678 690 676 722" stroke="#E6C0A0" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+        <!-- buket -->
+        <g>
+          <path d="M676 720 q-6 14 -2 24 M676 720 q10 12 6 22" stroke="#6F8A62" stroke-width="2" fill="none"/>
+          <ellipse cx="668" cy="745" rx="9" ry="4" fill="#7E9970" transform="rotate(-24 668 745)"/>
+          <ellipse cx="686" cy="745" rx="9" ry="4" fill="#7E9970" transform="rotate(26 686 745)"/>
+          <circle cx="676" cy="732" r="8.5" fill="#F2C9C4"/><circle cx="668" cy="728" r="6.5" fill="#FBF6EA"/>
+          <circle cx="684" cy="728" r="6.5" fill="#E9AAB0"/><circle cx="676" cy="722" r="5.5" fill="#FBF6EA"/>
+          <circle cx="670" cy="737" r="4.5" fill="#B7AAD0"/><circle cx="684" cy="737" r="4.5" fill="#F5DDD8"/>
+        </g>
+        <!-- boyun və baş -->
+        <rect x="644" y="627" width="12" height="20" rx="4" fill="#EBC8AA"/>
+        <ellipse cx="650" cy="613" rx="13.5" ry="16" fill="#4E3427"/>
+        <circle cx="650" cy="595" r="8.5" fill="#4E3427"/>
+        <ellipse cx="637" cy="617" rx="2.4" ry="4" fill="#EBC8AA"/><ellipse cx="663" cy="617" rx="2.4" ry="4" fill="#EBC8AA"/>
+        <!-- çiçək tacı -->
+        <g><circle cx="640" cy="600" r="3.2" fill="#F5DDD8"/><circle cx="650" cy="588" r="3.6" fill="#E9AAB0"/><circle cx="660" cy="600" r="3.2" fill="#FBF6EA"/><circle cx="650" cy="601" r="2.4" fill="#B7AAD0"/></g>
+      </g>
+    </g>
+  </svg></div>
+
+  <div class="layer fgt fgt-l" data-depth="0.09"><svg class="in in-fgtl sway" id="fg-tl" viewBox="0 0 560 330" preserveAspectRatio="xMinYMin meet" aria-hidden="true"></svg></div>
+  <div class="layer fgt fgt-r" data-depth="0.09"><svg class="in in-fgtr sway2" id="fg-tr" viewBox="0 0 560 330" preserveAspectRatio="xMaxYMin meet" aria-hidden="true"></svg></div>
+  <div class="layer fgb fgb-l" data-depth="0.11"><svg class="in in-fgbl" id="fg-bl" viewBox="0 0 520 300" preserveAspectRatio="xMinYMax meet" aria-hidden="true"></svg></div>
+  <div class="layer fgb fgb-r" data-depth="0.11"><svg class="in in-fgbr" id="fg-br" viewBox="0 0 520 300" preserveAspectRatio="xMaxYMax meet" aria-hidden="true"></svg></div>
+
+  <canvas id="petals" aria-hidden="true"></canvas>
+
+  <div class="hero-text">
+    <p class="eyebrow hero-eyebrow" data-bind="eventTitleLong"></p>
+    <h2 class="hero-names script" aria-label="Şahmar və Aydan">
+      <span class="nm" id="nm-groom"></span><span class="amp">&amp;</span><span class="nm" id="nm-bride"></span>
+    </h2>
+    <p class="hero-date"><span data-bind="dateNumeric"></span></p>
+  </div>
+
+  <a class="scroll-cue" href="#countdown" aria-label="Aşağı sürüşdür">
+    <span>Aşağı sürüşdürün</span><i></i>
+  </a>
+
+  <svg class="hero-edge" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+    <path filter="url(#wc)" d="M-20 70 C 120 30 240 90 380 62 C 520 34 640 94 780 64 C 920 36 1060 88 1220 52 L1220 140 L-20 140Z" fill="#F7F4EA"/>
+  </svg>
+</header>
+
+<main>
+  <!-- ============ DƏVƏT MƏTNİ + TAYMER ============ -->
+  <section class="sec sec-intro" id="countdown">
+    <div class="wash wash-a"></div><div class="wash wash-b"></div>
+    <div class="wrap narrow center">
+      <svg class="sprig reveal" aria-hidden="true"><use href="#sprig"/></svg>
+      <p class="eyebrow reveal">Sizi gözləyirik</p>
+      <h2 class="title reveal">Sevincimizi <em>sizinlə</em> bölüşmək istəyirik</h2>
+      <p class="lead reveal">Həyatımızın ən xüsusi günlərindən birini sevdiklərimizlə — sizinlə birgə yaşamaq bizim üçün böyük xoşbəxtlikdir. Sizi nişan mərasimimizdə görməkdən qürur duyarıq.</p>
+
+      <div class="cd reveal" id="cd" aria-live="off">
+        <p class="cd-title" id="cd-title">Nişana qalan vaxt</p>
+        <div class="cd-grid">
+          <div class="cd-box"><span class="num" data-u="days">00</span><span class="lab">gün</span></div>
+          <div class="cd-box"><span class="num" data-u="hours">00</span><span class="lab">saat</span></div>
+          <div class="cd-box"><span class="num" data-u="minutes">00</span><span class="lab">dəqiqə</span></div>
+          <div class="cd-box"><span class="num" data-u="seconds">00</span><span class="lab">saniyə</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TARİX / TƏQVİM ============ -->
+  <section class="sec sec-date" id="date">
+    <div class="wrap two">
+      <div class="date-copy reveal">
+        <p class="eyebrow">Qeydlərinizə yazın</p>
+        <h2 class="title">Nişan <em>günü</em></h2>
+        <div class="date-big">
+          <span class="d" data-bind="dayNum"></span>
+          <span class="m"><b data-bind="monthName"></b><small data-bind="year"></small></span>
+        </div>
+        <p class="date-line"><span data-bind="weekday"></span> · saat <b data-bind="time"></b></p>
+        <div class="btn-row">
+          <button class="btn" id="add-cal" type="button">Təqvimə əlavə et</button>
+          <a class="btn ghost" href="#venue">Məkana bax</a>
+        </div>
+      </div>
+      <div class="cal reveal" id="cal" aria-label="Təqvim"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROQRAM ============ -->
+  <section class="sec sec-program" id="program">
+    <div class="wash wash-c"></div>
+    <div class="wrap">
+      <div class="head center reveal">
+        <svg class="sprig" aria-hidden="true"><use href="#sprig"/></svg>
+        <p class="eyebrow">Axşamın gedişatı</p>
+        <h2 class="title">Tədbirin <em>ardıcıllığı</em></h2>
+      </div>
+      <ol class="tl" id="timeline"></ol>
+    </div>
+  </section>
+
+  <!-- ============ DRESS CODE ============ -->
+  <section class="sec sec-dress" id="dress">
+    <div class="wrap two">
+      <div class="dress-art reveal" aria-hidden="true">
+        <svg viewBox="0 0 380 400">
+          <g filter="url(#wc)">
+            <ellipse cx="190" cy="372" rx="170" ry="14" fill="#9DB09A" opacity=".35"/>
+            <!-- paltar -->
+            <g transform="translate(-8 0)">
+              <path d="M112 34 Q112 24 122 24 Q132 24 132 34 Q132 40 122 44" fill="none" stroke="#B79C62" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M122 44 L58 80 Q56 84 62 84 L182 84 Q188 84 186 80 Z" fill="none" stroke="#B79C62" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M96 86 Q94 112 104 126 Q100 150 108 182 Q70 250 52 352 Q122 372 192 352 Q172 250 136 182 Q144 150 140 126 Q150 112 148 86 L136 86 Q134 106 122 112 Q110 106 108 86Z" fill="url(#dressg)"/>
+              <path d="M108 182 Q122 190 136 182 L138 192 Q122 200 106 192Z" fill="#E4C4BB"/>
+              <path d="M112 200 Q92 270 78 350 M122 200 L122 360 M132 200 Q152 270 168 350" stroke="#5E7791" stroke-width="1.4" fill="none" opacity=".55"/>
+              <path d="M52 352 Q122 372 192 352" stroke="#B9CBDA" stroke-width="3" fill="none" opacity=".8"/>
+            </g>
+            <!-- kostyum -->
+            <g transform="translate(6 0)">
+              <path d="M252 34 Q252 24 262 24 Q272 24 272 34 Q272 40 262 44" fill="none" stroke="#B79C62" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M262 44 L196 84 Q196 90 202 90 L322 90 Q328 90 328 84 Z" fill="none" stroke="#B79C62" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="M206 92 L318 92 L336 120 L330 262 L194 262 L188 120 Z" fill="#3F5369"/>
+              <path d="M262 92 L236 92 L262 190 Z M262 92 L288 92 L262 190 Z" fill="#F8F3E8"/>
+              <path d="M236 92 L262 190 L212 262 L194 262 L190 130 Z M288 92 L262 190 L312 262 L330 262 L334 130 Z" fill="#2F4156"/>
+              <path d="M262 92 L262 262" stroke="#27374A" stroke-width="1.4"/>
+              <path d="M250 104 L262 98 L274 104 L262 116 Z" fill="#C99A8E"/>
+              <rect x="300" y="146" width="18" height="5" rx="1.5" fill="#F3DAD4" transform="rotate(-8 309 148)"/>
+              <circle cx="266" cy="190" r="2.6" fill="#B79C62"/>
+              <path d="M214 262 L310 262 L306 360 L270 360 L262 292 L254 360 L218 360 Z" fill="#2F4156"/>
+              <ellipse cx="240" cy="366" rx="22" ry="6" fill="#1D2631"/><ellipse cx="284" cy="366" rx="22" ry="6" fill="#1D2631"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="dress-copy reveal">
+        <p class="eyebrow">Geyim kodu</p>
+        <h2 class="title">Axşamın <em>rəng gamması</em></h2>
+        <p class="chip" data-bind="dressStyle"></p>
+        <p class="lead left" data-bind="dressText"></p>
+        <div class="swatches" id="swatches"></div>
+        <div class="dress-cards">
+          <div class="dc"><h4>Xanımlar</h4><p data-bind="dressWomen"></p></div>
+          <div class="dc"><h4>Cənablar</h4><p data-bind="dressMen"></p></div>
+        </div>
+        <p class="note" data-bind="dressAvoid"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MƏKAN ============ -->
+  <section class="sec sec-venue" id="venue">
+    <div class="wash wash-b"></div>
+    <div class="wrap">
+      <div class="head center reveal">
+        <svg class="sprig" aria-hidden="true"><use href="#sprig"/></svg>
+        <p class="eyebrow">Bizi harada tapacaqsınız</p>
+        <h2 class="title">Tədbirin <em>məkanı</em></h2>
+      </div>
+      <div class="venue-grid">
+        <div class="venue-card reveal">
+          <h3 data-bind="venueName"></h3>
+          <p class="addr"><a id="addr-link" target="_blank" rel="noopener" aria-label="Ünvanı naviqasiyada aç"><span data-bind="venueAddress"></span></a></p>
+          <div class="v-meta">
+            <div><small>Tarix</small><b data-bind="dateShort"></b></div>
+            <div><small>Başlanğıc</small><b data-bind="time"></b></div>
+          </div>
+          <p class="v-note" data-bind="venueNote"></p>
+          <div class="btn-row">
+            <a class="btn" id="map-dir" target="_blank" rel="noopener">Yol tarifi</a>
+            <a class="btn ghost" id="map-open" target="_blank" rel="noopener">Google Maps</a>
+            <a class="btn ghost" id="map-waze" target="_blank" rel="noopener">Waze</a>
+          </div>
+        </div>
+        <div class="map-frame reveal locked" id="map-frame">
+          <button class="map-lock" id="map-lock" type="button" aria-label="Xəritəni aktivləşdir"><span>Xəritəyə toxunun</span></button>
+          <iframe id="map" title="Məkanın xəritədəki yeri" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RSVP ============ -->
+  <section class="sec sec-rsvp" id="rsvp">
+    <div class="wrap narrow">
+      <div class="head center reveal">
+        <svg class="sprig" aria-hidden="true"><use href="#sprig"/></svg>
+        <p class="eyebrow">İştirakınız</p>
+        <h2 class="title">Gəlişinizi <em>təsdiqləyin</em></h2>
+        <p class="lead">Zəhmət olmasa <b data-bind="rsvpBy"></b> tarixinədək bildirin ki, sizin üçün yer ayıraq.</p>
+      </div>
+      <form class="rsvp reveal" id="rsvp-form" autocomplete="off">
+        <label class="field"><span>Ad və soyad</span>
+          <input name="name" type="text" required placeholder="Adınızı yazın" maxlength="60"></label>
+        <fieldset class="choice">
+          <legend>İştirak edəcəksiniz?</legend>
+          <label><input type="radio" name="att" value="yes" checked><span>Bəli, gələcəyəm</span></label>
+          <label><input type="radio" name="att" value="no"><span>Təəssüf, gələ bilməyəcəyəm</span></label>
+        </fieldset>
+        <label class="field" id="guests-field"><span>Neçə nəfər (özünüzlə birlikdə)</span>
+          <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+        <label class="field"><span>Qeyd (istəyə bağlı)</span>
+          <textarea name="note" rows="2" placeholder="Təbrik və ya xüsusi qeydiniz" maxlength="200"></textarea></label>
+        <button class="btn big" type="submit">WhatsApp ilə göndər</button>
+        <p class="fine">Düyməyə basanda WhatsApp açılacaq və cavabınız hazır mətn kimi göndəriləcək.</p>
+      </form>
+      <div class="thanks" id="thanks" hidden>
+        <svg viewBox="0 0 60 60" class="thanks-heart"><use href="#heart-ring"/></svg>
+        <h3 class="script">Təşəkkür edirik!</h3>
+        <p>Cavabınız üçün minnətdarıq. Sizi görməyi səbirsizliklə gözləyirik.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <svg class="sprig" aria-hidden="true"><use href="#sprig"/></svg>
+  <p class="eyebrow">Sizi görməkdən xoşbəxt olacağıq</p>
+  <p class="foot-names script"><span data-bind="groom"></span> <i>&amp;</i> <span data-bind="bride"></span></p>
+  <p class="foot-date" data-bind="dateNumeric"></p>
+  <p class="foot-tag" data-bind="hashtag"></p>
+</footer>
+
+<button class="music" id="music" type="button" hidden aria-pressed="false" aria-label="Musiqini söndür">
+  <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+</button>
+
+<script src="js/config.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
