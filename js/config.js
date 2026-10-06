@@ -47,16 +47,9 @@ window.INVITE = {
   // Geyim kodu
   dress: {
     style: "Zərif · Yarı-rəsmi",
-    text: "Axşamın zərif ab-havasına uyğun geyinməyinizi xahiş edirik. Bağ mühitində ayaqqabı seçərkən rahatlığı da unutmayın.",
-    women: "Midi və ya uzun paltar, pastel və toz tonlar, zərif aksesuarlar.",
-    men: "Tünd göy və ya boz kostyum, açıq rəngli köynək, qalstuk və ya papyon.",
-    avoid: "Ağ və süd rəngi geyimləri gəlinimiz üçün saxlayaq. Parlaq neon rənglərdən də yayınmağınızı rica edirik.",
-    palette: [
-      { name: "Adaçayı",        hex: "#9DB09A" },
-      { name: "Toz mavisi",     hex: "#7B93AA" },
-      { name: "Pudra",          hex: "#E4C4BB" },
-      { name: "Lavanda",        hex: "#B7AAD0" },
-      { name: "Dumanlı göy",    hex: "#33465A" }
-    ]
+    text: "Bu axşam şəkillərimizdə sizin də rənginiz olsun: zərif geyinin, özünüzü ən rahat və ən gözəl hiss etdiyiniz geyimi seçin. Rəqs meydançası sizi gözləyir, ona görə ayaqqabınızın rahat olmasına da diqqət edin.",
+    women: "Özünüzü ən gözəl hiss etdiyiniz paltar və zərif aksesuarlar, sevdiyiniz rəngdə.",
+    men: "Kostyum, köynək, qalstuk və ya papyon, zövqünüzə uyğun rəngdə.",
+    avoid: "Ağ və süd rəngi geyimləri gəlinimiz üçün saxlayaq."
   }
 };

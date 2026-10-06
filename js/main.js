@@ -183,10 +183,6 @@
     window.addEventListener('resize', upd); upd();
   })();
 
-  /* ---------- paltar rəngləri ---------- */
-  $('#swatches').innerHTML = C.dress.palette.map(c =>
-    `<div class="sw"><i style="background:${c.hex}"></i><span>${c.name}</span></div>`).join('');
-
   /* ---------- xəritə ---------- */
   (function map() {
     const q = encodeURIComponent(C.venue.mapQuery);
