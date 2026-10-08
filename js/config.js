@@ -37,11 +37,13 @@ window.INVITE = {
   // Tədbirin ardıcıllığı (DƏYİŞ: saatları və adları)
   program: [
     { time: "18:00", icon: "glass",  title: "Qonaqların qarşılanması", text: "Sərinləşdirici içkilər və xoş söhbət ilə başlayırıq." },
-    { time: "18:45", icon: "ring",   title: "Nişan mərasimi",          text: "Üzüklərin təqdimi — günün ən həyəcanlı anı." },
+    { time: "18:45", icon: "ring",   title: "Nişan mərasimi",          text: "Şirinçay və üzüklərin təqdimi — günün ən həyəcanlı anı." },
     { time: "19:30", icon: "plate",  title: "Şam yeməyi",              text: "Ailə və dostlarla bir süfrə arxasında." },
     { time: "20:30", icon: "music",  title: "Musiqi və rəqs",          text: "Canlı ifa, ilk rəqs və xoş əhval-ruhiyyə." },
     { time: "21:45", icon: "cake",   title: "Tort kəsilməsi",          text: "Şirin anlar və xatirə şəkilləri." },
-    { time: "23:00", icon: "heart",  title: "Yola salma",              text: "Sizinlə olmaq bizim üçün böyük xoşbəxtlikdir." }
+    { time: "22:00", icon: "star",   title: "Cütlüyün özəl dansı",     text: "Şahmar və Aydanın birgə ilk rəqsi." },
+    { time: "22:30", icon: "drum",   title: "DJ darbuka şou",          text: "Ritm, enerji və dolu rəqs meydançası." },
+    { time: "00:00", icon: "heart",  title: "Yola salma",              text: "Sizinlə olmaq bizim üçün böyük xoşbəxtlikdir." }
   ],
 
   // Geyim kodu
